@@ -4,7 +4,13 @@ Engineering knowledge operating system for AI agents.
 
 ## Start Here
 
-→ **[agent-os/README.md](agent-os/README.md)** — system overview, navigation, philosophy, lifecycle.
+| Audience | Entry |
+|----------|-------|
+| **Russian (recommended for lab)** | **[START_HERE_RU.md](START_HERE_RU.md)** → [QUICKSTART_RU.md](QUICKSTART_RU.md) |
+| English / knowledge OS | **[agent-os/README.md](agent-os/README.md)** — overview, philosophy, lifecycle |
+| Operators | [operator-playbooks/README.md](operator-playbooks/README.md) · [operator-playbooks/ru/](operator-playbooks/ru/) |
+| Students | [curriculum/README.md](curriculum/README.md) · [curriculum/ru/](curriculum/ru/) |
+| Phase 3 gate | [governance/PHASE_3_START_CONDITIONS.md](governance/PHASE_3_START_CONDITIONS.md) · [PHASE_3_WARNING_RU.md](PHASE_3_WARNING_RU.md) |
 
 ## Structure
 
