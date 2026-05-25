@@ -31,6 +31,7 @@ The **query loop** (`query()`) is the single async generator that runs every age
 - [[error-recovery-ladder]]
 - [[terminal-states]]
 - [[streaming-tool-executor]]
+- [[gui-agent-loop]] (GUI modality parallel golden path)
 
 ## Sources
 

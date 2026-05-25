@@ -23,8 +23,9 @@
 
 ## Related Concepts
 
-- [[memory-taxonomy]]
-- [[long-term-memory]]
+- [[memory-as-crutch]]
+- [[memory-char-limits]]
+- [[unbounded-memory-growth]]
 
 ## Sources
 

@@ -11,6 +11,15 @@ Reusable architecture patterns extracted from production agent systems.
 - [withholding-errors](withholding-errors.md)
 - [fail-closed-defaults](fail-closed-defaults.md)
 - [prompt-cache-as-constraint](prompt-cache-as-constraint.md)
+- [progressive-skill-disclosure](progressive-skill-disclosure.md)
+- [memory-aware-execution](memory-aware-execution.md)
+- [verification-before-writeback](verification-before-writeback.md)
+- [fail-closed-agent-loop](fail-closed-agent-loop.md)
+
+## Semantic clusters
+
+- [verification](../graph/cluster-indexes/verification-cluster.md)
+- [memory-governance](../graph/cluster-indexes/memory-governance-cluster.md) (memory-aware-execution, progressive-skill-disclosure)
 
 ## Up
 

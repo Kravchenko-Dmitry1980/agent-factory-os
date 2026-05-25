@@ -28,6 +28,31 @@
 - [[execution-verification]]
 - [[stop-hooks]]
 - [[episodic-memory]]
+- [[visual-verification]]
+- [[fail-closed-agent-loop]]
+
+## Related Anti-patterns
+
+- [[infinite-retry-loops]]
+
+## Related Patterns
+
+- [[withholding-errors]]
+- [[fail-closed-agent-loop]]
+
+## Upstream Sources
+
+- `Books/claude/ch05-agent-loop.md`
+- `Books/claude/ch06-tools.md`
+- `Books/claude/ch11-memory.md`
+
+## Governance References
+
+- `governance/SEMANTIC_LINKING_AUDIT.md`
+
+## Semantic Cluster
+
+verification
 
 ## Sources
 

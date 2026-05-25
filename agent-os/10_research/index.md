@@ -28,6 +28,7 @@ Normalized research repository for the Claude Code architecture book.
 | Patterns plan | [patterns/index.md](patterns/index.md) |
 | Glossary plan | [glossary/index.md](glossary/index.md) |
 | Master plan | [extraction-plan.md](extraction-plan.md) |
+| Semantic graph (Phase 1.3) | [graph/README.md](../graph/README.md) |
 | Original sources | [sources.md](sources.md) |
 
 ## Legacy

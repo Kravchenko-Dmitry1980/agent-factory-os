@@ -14,6 +14,12 @@ Runtime mechanics: loop, tools, concurrency, bootstrap, API, compression.
 - [error-recovery-ladder](error-recovery-ladder.md)
 - [terminal-states](terminal-states.md)
 - [api-layer](api-layer.md)
+- [gui-agent-loop](gui-agent-loop.md)
+- [visual-grounding](visual-grounding.md)
+
+## Semantic cluster
+
+[gui-modality](../graph/cluster-indexes/gui-modality-cluster.md)
 
 ## Up
 

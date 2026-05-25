@@ -1,0 +1,12 @@
+TRACE id=rev-002 workflow=review-queue scenario=approval-denied
+────────────────────────────────────────────────────────
+[19:57:10] task_started         actor=queue       task_id=a1b2c3d4
+[19:57:10] verification_passed  actor=critic      advisory=true verdict=pass
+[19:57:10] approval_requested   actor=human       required=true
+[19:57:11] approval_denied      actor=human       reason=critic_disagreement
+[19:57:11] task_failed          actor=system      reason=approval denied
+────────────────────────────────────────────────────────
+OUTCOME status=rejected
+GOVERNANCE gates_passed=1 gates_failed=1 escalated=no
+
+Note: critic passed — human caught disagreement. critic != truth.

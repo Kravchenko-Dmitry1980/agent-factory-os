@@ -29,6 +29,9 @@
 - [[coordination]]
 - [[swarms]]
 - [[permission-modes]]
+- [[subagent-tool-restrictions]]
+- [[kanban-vs-delegate]]
+- [[durable-task-coordination]]
 
 ## Sources
 

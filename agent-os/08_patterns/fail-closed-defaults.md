@@ -26,6 +26,7 @@
 - [[self-describing-tools]]
 - [[tool-runtime]]
 - [[permission-modes]]
+- [[fail-closed-agent-loop]]
 
 ## Sources
 

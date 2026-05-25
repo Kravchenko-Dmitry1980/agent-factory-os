@@ -14,6 +14,10 @@ Harness concepts: interface, mechanisms, verification, feedback, permissions, ho
 - [hooks-lifecycle](hooks-lifecycle.md)
 - [stop-hooks](stop-hooks.md)
 
+## Semantic cluster
+
+[verification](../graph/cluster-indexes/verification-cluster.md)
+
 ## Up
 
 - [Agent-OS README](../README.md)

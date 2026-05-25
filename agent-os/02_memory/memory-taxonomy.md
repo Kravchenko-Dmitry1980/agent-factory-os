@@ -33,6 +33,8 @@ The **memory taxonomy** defines exactly four memory types — user, feedback, pr
 - [[semantic-memory]]
 - [[episodic-memory]]
 - [[long-term-memory]]
+- [[memory-char-limits]]
+- [[profile-isolation]]
 
 ## Sources
 

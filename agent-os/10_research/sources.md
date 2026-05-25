@@ -69,12 +69,76 @@ Books/agents/
 
 ---
 
+## C. Brain OS Research Corpus
+
+| Field | Value |
+|-------|-------|
+| **Path** | `Books/brain-os/` |
+| **Status** | **Research tier — non-canonical — promotion-gated** |
+| **Format** | Extracted markdown KB from author draft |
+| **Policy** | Read-only; ideas only; strip plane branding before any curated promotion |
+
+| Rule | Policy |
+|------|--------|
+| Treat as canonical source | ❌ Forbidden |
+| Auto-promote to `agent-os/00–09/` | ❌ Requires PROMOTION_REVIEW + governance gate |
+| Cite in curated extractions | ✅ With `source_tier: research` metadata |
+| Promote adaptation-service, replay, curator automation | ❌ Frozen per governance |
+
+**Provenance:** Author draft Brain OS documentation. Maturity labels in corpus; not production-validated as whole.
+
+---
+
+## D. Hermes Agent Research Sandbox
+
+| Field | Value |
+|-------|-------|
+| **Path** | `experiments/hermes-agent-review/` |
+| **Status** | **Research tier — non-canonical — promotion-gated** |
+| **Upstream clone** | `experiments/hermes-agent-review/source/hermes-agent/` (reference only) |
+| **Policy** | Pattern extraction source; no runtime code in curated layer |
+
+| Rule | Policy |
+|------|--------|
+| Treat as canonical source | ❌ Forbidden |
+| Copy upstream Python into agent-os | ❌ Forbidden |
+| Promote scored PROMOTE_NOW patterns | ✅ Into existing taxonomy with provenance |
+| Promote gateway matrix, provider catalog, sandbox backends | ❌ REJECT per PROMOTION_REVIEW |
+
+**Provenance:** Phase 1.1 sandbox review; see `PROMOTION_REVIEW.md` §3.
+
+---
+
+## E. MobileAgent Research Sandbox
+
+| Field | Value |
+|-------|-------|
+| **Path** | `experiments/mobile-agent-review/` |
+| **Status** | **Research tier — non-canonical — promotion-gated** |
+| **Upstream clone** | `experiments/mobile-agent-review/source/MobileAgent/` (reference only) |
+| **Policy** | GUI modality research; no ADB/runtime in curated layer |
+
+| Rule | Policy |
+|------|--------|
+| Treat as canonical source | ❌ Forbidden |
+| Promote OCR pipelines, run scripts, model weights | ❌ REJECT per PROMOTION_REVIEW |
+| Promote loop/verification/grounding concepts | ✅ With GUI anti-pattern pairs |
+
+**Provenance:** Phase 1.1 sandbox review; see `PROMOTION_REVIEW.md` §4.
+
+---
+
 ## Layer Model
 
 ```
-Books/                 ← source layer (canonical corpora, read-only policy)
-agent-os/10_research/  ← catalog, plans, navigation (no semantic rewrites)
-agent-os/00–09/        ← curated atomic knowledge (partial extraction)
+Books/claude/                    ← canonical source (primary)
+Books/agents/                    ← canonical source (secondary, QA pending)
+Books/brain-os/                  ← research corpus (promotion-gated)
+experiments/hermes-agent-review/ ← research sandbox (promotion-gated)
+experiments/mobile-agent-review/ ← research sandbox (promotion-gated)
+agent-os/10_research/            ← catalog, plans, navigation
+agent-os/00–09/                  ← curated atomic knowledge
+governance/                      ← promotion policy and logs
 ```
 
 ## Up

@@ -1,0 +1,14 @@
+TRACE id=llm-001 workflow=llm-verification scenario=malformed
+────────────────────────────────────────────────────────
+[20:02:18] task_started         actor=workflow    prompt_len=52
+[20:02:18] task_started         actor=llm         mode=mock response_received=true
+[20:02:18] llm_malformed_output actor=verifier    reason=JSON parse failed
+[20:02:18] verification_failed  actor=verifier    untrusted_input=true
+[20:02:18] governance_rejection actor=gate        decision=reject
+────────────────────────────────────────────────────────
+OUTCOME status=rejected
+GOVERNANCE gates_passed=0 gates_failed=1 escalated=no
+
+REMINDER: LLM output != truth (even when parse succeeds)
+
+Source: integrations-real/llm-verification-adapter/

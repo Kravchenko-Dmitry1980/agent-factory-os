@@ -1,0 +1,17 @@
+TRACE id=esc-001 workflow=escalation scenario=retry-storm
+────────────────────────────────────────────────────────
+[19:57:09] task_started         actor=system      task=ambiguous_refund
+[19:57:09] verification_failed  actor=worker      reason=uncertainty attempt=1
+[19:57:09] retry_triggered      actor=system      retry=1
+[19:57:09] verification_failed  actor=worker      reason=uncertainty attempt=2
+[19:57:09] retry_triggered      actor=system      retry=2
+[19:57:09] verification_failed  actor=worker      reason=uncertainty attempt=3
+[19:57:09] retry_triggered      actor=system      retry=3
+[19:57:09] retry_exhausted      actor=system      max=3
+[19:57:09] escalation_triggered actor=supervisor  reason=retry ceiling
+[19:57:09] unsafe_action_blocked actor=gate     reason=not completed after escalate
+────────────────────────────────────────────────────────
+OUTCOME status=escalated
+GOVERNANCE gates_passed=0 gates_failed=3 escalated=yes
+
+Source: prototypes/integrations/escalation-workflow/

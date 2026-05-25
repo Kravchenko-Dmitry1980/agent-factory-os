@@ -10,6 +10,13 @@ Multi-agent systems: subagents, swarms, coordination, tasks, roles.
 - [swarms](swarms.md)
 - [synchronization](synchronization.md)
 - [role-systems](role-systems.md)
+- [kanban-vs-delegate](kanban-vs-delegate.md)
+- [subagent-tool-restrictions](subagent-tool-restrictions.md)
+- [durable-task-coordination](durable-task-coordination.md)
+
+## Semantic cluster
+
+[orchestration](../graph/cluster-indexes/orchestration-cluster.md)
 
 ## Up
 

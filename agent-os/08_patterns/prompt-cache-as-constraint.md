@@ -27,6 +27,8 @@
 - [[sticky-latch-pattern]]
 - [[api-layer]]
 - [[cache-busting-sections]]
+- [[frozen-memory-snapshot]]
+- [[mid-session-memory-injection]]
 
 ## Sources
 

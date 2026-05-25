@@ -29,6 +29,31 @@
 - [[stop-hooks]]
 - [[feedback-loops]]
 - [[subagents]]
+- [[visual-verification]]
+- [[fail-closed-agent-loop]]
+
+## Related Anti-patterns
+
+- [[infinite-retry-loops]]
+- [[unverified-gui-clicks]]
+
+## Related Patterns
+
+- [[fail-closed-agent-loop]]
+- [[verification-before-writeback]]
+
+## Upstream Sources
+
+- `Books/claude/ch05-agent-loop.md`
+- `Books/claude/ch08-sub-agents.md`
+
+## Governance References
+
+- `governance/SEMANTIC_LINKING_AUDIT.md`
+
+## Semantic Cluster
+
+verification
 
 ## Sources
 

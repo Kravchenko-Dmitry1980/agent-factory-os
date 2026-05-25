@@ -12,6 +12,14 @@ Memory systems for agents: semantic, episodic, long-term, shared, compaction.
 - [memory-compaction](memory-compaction.md)
 - [memory-taxonomy](memory-taxonomy.md)
 - [memory-recall](memory-recall.md)
+- [frozen-memory-snapshot](frozen-memory-snapshot.md)
+- [memory-char-limits](memory-char-limits.md)
+- [profile-isolation](profile-isolation.md)
+- [memory-provider-boundaries](memory-provider-boundaries.md)
+
+## Semantic cluster
+
+[memory-governance](../graph/cluster-indexes/memory-governance-cluster.md)
 
 ## Up
 

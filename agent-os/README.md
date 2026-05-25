@@ -51,6 +51,16 @@ graph TD
 | [10_research](10_research/index.md) | Research corpus, chapter catalog, extraction plans | [Research README](10_research/README.md) |
 | [11_glossary](11_glossary/index.md) | Shared terminology | [agent](11_glossary/agent.md) |
 | [12_diagrams](12_diagrams/index.md) | Mermaid architecture diagrams | [six-abstractions](12_diagrams/six-abstractions.md) |
+| [doctrine](doctrine/README.md) | Phase 1.4 worldview synthesis (not taxonomy) | [system-positioning](doctrine/system-positioning.md) |
+| [graph](graph/README.md) | Semantic clusters, provenance, navigation (Phase 1.3) | [cluster-navigation](graph/navigation/cluster-navigation.md) |
+
+## Semantic navigation (Phase 1.3)
+
+Traverse by **architecture cluster**, not only folder number:
+
+1. [cluster-navigation](graph/navigation/cluster-navigation.md)
+2. [concept-clusters](graph/concept-clusters.md)
+3. [provenance-graph](graph/provenance-graph.md)
 
 ## Architectural Philosophy
 

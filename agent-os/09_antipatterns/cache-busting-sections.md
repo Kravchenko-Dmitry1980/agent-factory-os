@@ -25,6 +25,8 @@
 
 - [[prompt-cache-as-constraint]]
 - [[sticky-latch-pattern]]
+- [[mid-session-memory-injection]]
+- [[frozen-memory-snapshot]]
 
 ## Sources
 

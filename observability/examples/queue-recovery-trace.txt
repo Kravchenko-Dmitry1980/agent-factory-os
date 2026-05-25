@@ -1,0 +1,15 @@
+TRACE id=que-001 workflow=local-queue scenario=recovery
+────────────────────────────────────────────────────────
+[20:03:01] task_started         actor=queue       task_id=35055964 enqueued=true
+[20:03:01] verification_failed  actor=verifier    attempt=1
+[20:03:01] retry_triggered      actor=queue       retry=1 status=pending
+[20:03:01] task_failed          actor=system      reason=simulated crash (process exit)
+[20:03:02] queue_recovered      actor=worker      pending_count=1 source=sqlite
+[20:03:02] task_started         actor=worker      task_id=35055964 resumed=true
+[20:03:02] verification_passed  actor=verifier    attempt=2
+[20:03:02] task_completed       actor=queue       status=completed
+────────────────────────────────────────────────────────
+OUTCOME status=completed
+GOVERNANCE gates_passed=2 gates_failed=1 escalated=no
+
+Source: integrations-real/local-queue-worker/ --scenario recovery

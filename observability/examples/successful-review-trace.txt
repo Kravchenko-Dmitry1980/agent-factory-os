@@ -1,0 +1,13 @@
+TRACE id=rev-001 workflow=review-queue scenario=happy
+────────────────────────────────────────────────────────
+[19:56:59] task_started         actor=queue       task_id=cb81c378 goal=blog_post
+[19:56:59] task_started         actor=worker      action=draft_created
+[19:56:59] verification_passed  actor=critic      advisory=true facts_verified=false
+[19:56:59] approval_requested   actor=human       required=true
+[19:56:59] verification_passed  actor=human       decision=approve
+[19:56:59] task_completed       actor=publisher   published=true
+────────────────────────────────────────────────────────
+OUTCOME status=completed
+GOVERNANCE gates_passed=3 gates_failed=0 escalated=no
+
+Source: prototypes/integrations/review-queue-workflow/

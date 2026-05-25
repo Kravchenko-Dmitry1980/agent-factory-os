@@ -1,0 +1,202 @@
+implementation-ready system design doc для Brain OS / Control Plane поверх твоего стека:
+CAIM = Memory Plane
+MirrorMind = Cognition Plane
+System-1.5 = Compute Optimization Plane
+VGP2 = Policy / Strategy Plane
+Digital Twin / Sandbox / Test Machine = Product Plane
+Док опирается на твою интегральную модель стека и на логику генеративных агентов: память → извлечение → рефлексия → планирование → действие. 
+A. Система
+1. Назначение
+Brain OS — управляющий control plane, который выбирает режим когнитивной обработки, управляет памятью, политиками, оркестрацией reasoning, трассировкой и безопасностью.
+Цели
+Разделить control / memory / cognition / product.
+Обеспечить воспроизводимость поведения цифрового двойника.
+Снизить стоимость reasoning через adaptive routing.
+Дать traceability для HR / медицины / цифровых двойников.
+2. Границы
+Внутри Brain OS
+task classification
+cognitive routing
+memory control
+policy selection
+reasoning orchestration
+execution supervision
+evaluation
+safety
+adaptation
+Вне Brain OS
+UI продукта
+конкретные LLM-провайдеры
+векторные БД
+sandbox renderer / Phaser / game engine
+внешние инструменты через MCP/API
+3. Контекстная архитектура
+┌──────────────────────────────────────────────┐│ Product Layer                                ││ Recruiter / Sandbox / Test Machine / BS      │└──────────────────────────────────────────────┘                       │                       ▼┌──────────────────────────────────────────────┐│ Brain OS (Control Plane)                     ││ classifier / router / policy / trace / eval  │└──────────────────────────────────────────────┘      │                  │                 │      ▼                  ▼                 ▼┌──────────────┐  ┌──────────────┐  ┌──────────────┐│ CAIM         │  │ MirrorMind   │  │ System-1.5   ││ Memory Plane │  │ Cognition    │  │ Compute Opt  │└──────────────┘  └──────────────┘  └──────────────┘            │            │                │            └────────────┴────────────────┘                         ▼                    ┌────────┐                    │ VGP2   │                    │ Policy │                    └────────┘                         ▼                        LLM
+4. Логические сервисы
+brain-apitask-classifiercognitive-routermemory-orchestratorpolicy-enginereasoning-orchestratorexecution-supervisorevaluation-enginetrace-servicesafety-serviceadaptation-serviceevent-bus
+B. Контракты
+1. Core domain objects
+TaskEnvelope
+{  "task_id": "tsk_123",  "tenant_id": "org_1",  "product_context": "digital_twin",  "user_id": "usr_42",  "agent_id": "agt_007",  "scenario_id": "scn_12",  "input": {    "text": "Смоделируй поведение руководителя в конфликте сроков",    "attachments": []  },  "constraints": {    "latency_ms": 8000,    "token_budget": 12000,    "cost_budget_usd": 0.08,    "safety_level": "high"  },  "metadata": {    "locale": "ru",    "channel": "web"  }}
+RoutingDecision
+{  "task_id": "tsk_123",  "task_type": "simulation",  "complexity": "high",  "novelty": "medium",  "risk": "high",  "mode": "hybrid",  "selected_planes": ["caim", "mirrormind", "vgp2"],  "reasoning_depth": 3,  "memory_profile": "profile+episodic+reflection",  "fallback_mode": "memory_augmented",  "human_escalation_required": false}
+ExecutionPlan
+{  "task_id": "tsk_123",  "plan_id": "pln_888",  "steps": [    {      "step_id": "s1",      "type": "memory_retrieval",      "service": "memory-orchestrator"    },    {      "step_id": "s2",      "type": "policy_selection",      "service": "policy-engine"    },    {      "step_id": "s3",      "type": "multi_agent_reasoning",      "service": "reasoning-orchestrator"    },    {      "step_id": "s4",      "type": "evaluation",      "service": "evaluation-engine"    }  ]}
+TraceRecord
+{  "trace_id": "trc_333",  "task_id": "tsk_123",  "agent_id": "agt_007",  "mode": "hybrid",  "memory_hits": 12,  "tool_calls": 0,  "rounds": 3,  "latency_ms": 5320,  "token_input": 4210,  "token_output": 1180,  "quality_score": 0.84,  "status": "completed"}
+2. Режимы выполнения
+fast_reflexmemory_augmenteddeep_cognitivemulti_agent_deliberationsimulation_modehybrid
+3. Acceptance criteria
+Functional
+задача классифицируется
+режим выбирается детерминированно по policy/rules
+память извлекается по профилю
+reasoning запускается по execution plan
+trace пишется всегда
+результат проходит evaluation
+при high-risk возможна human escalation
+NFR
+p95 latency ≤ 8s для memory_augmented
+trace completeness ≥ 99%
+routing decision persisted = 100%
+idempotency для повторного task_id
+auditability для high-risk задач
+C. Архитектура
+1. Deployment view
+[API Gateway]    │    ├── brain-api    │      ├── task-classifier    │      ├── cognitive-router    │      ├── policy-engine    │      ├── reasoning-orchestrator    │      ├── execution-supervisor    │      ├── evaluation-engine    │      ├── safety-service    │      └── trace-service    │    ├── memory-orchestrator    │      ├── profile store    │      ├── episodic store    │      ├── semantic store    │      └── vector index    │    ├── sandbox-service    ├── agent-service    └── event-bus
+2. Decision routing logic
+Pseudocode
+def choose_mode(task_type, complexity, risk, memory_need, novelty):    if risk == "high" and task_type in {"medical", "hr_assessment"}:        return "hybrid"    if complexity == "low" and memory_need == "low":        return "fast_reflex"    if memory_need == "high" and complexity in {"low", "medium"}:        return "memory_augmented"    if complexity == "high" and novelty in {"medium", "high"}:        return "deep_cognitive"    if task_type in {"simulation", "research_synthesis", "strategy"}:        return "multi_agent_deliberation"    return "hybrid"
+3. Brain OS state machine
+RECEIVED  → CLASSIFIED  → ROUTED  → MEMORY_READY  → EXECUTING  → EVALUATING  → COMPLETED  ↘ FAILED  ↘ ESCALATED  ↘ FALLBACK_EXECUTED
+4. Memory orchestration model
+Memory classes
+profile_memoryworking_memoryepisodic_memorysemantic_memoryreflection_memoryscenario_memory
+Retrieval policy
+score = w_recency * recency      + w_relevance * relevance      + w_importance * importance      + w_identity * identity_relevance      + w_goal * goal_relevance
+5. Multi-agent reasoning template
+AnalystCriticStrategistSynthesizer
+Stop criteria
+- max_rounds reached- confidence >= threshold- disagreement <= threshold- budget exceeded → fallback
+D. API-контракты
+1. POST /v1/tasks/execute
+Request
+{  "task_id": "tsk_123",  "tenant_id": "org_1",  "product_context": "digital_twin",  "agent_id": "agt_007",  "scenario_id": "scn_12",  "input": {    "text": "Смоделируй реакцию руководителя на срыв срока"  },  "constraints": {    "latency_ms": 8000,    "token_budget": 12000,    "cost_budget_usd": 0.08,    "safety_level": "high"  }}
+Response
+{  "task_id": "tsk_123",  "status": "completed",  "mode": "hybrid",  "result": {    "summary": "Руководитель сначала уточнит факты, затем перераспределит задачи...",    "recommendation": "Запустить сценарий 2 с ограничением ресурсов",    "decision_trace_ref": "trc_333"  },  "quality": {    "score": 0.84,    "consistency": 0.81,    "goal_alignment": 0.88  }}
+2. POST /v1/tasks/classify
+{  "task_id": "tsk_123",  "product_context": "sandbox",  "input": {    "text": "Оцени возможный конфликт между двумя агентами"  }}
+Response
+{  "task_id": "tsk_123",  "task_type": "simulation",  "complexity": "high",  "novelty": "medium",  "risk": "medium",  "memory_need": "high",  "reasoning_need": "deep"}
+3. POST /v1/routing/decide
+{  "task_id": "tsk_123",  "classification": {    "task_type": "simulation",    "complexity": "high",    "risk": "medium",    "memory_need": "high",    "novelty": "medium"  }}
+Response
+{  "task_id": "tsk_123",  "mode": "multi_agent_deliberation",  "selected_planes": ["caim", "mirrormind", "vgp2"],  "fallback_mode": "memory_augmented",  "reasoning_depth": 4}
+4. POST /v1/memory/retrieve
+{  "task_id": "tsk_123",  "agent_id": "agt_007",  "query": "конфликт сроков и управленческие решения",  "memory_profile": ["profile", "episodic", "reflection"],  "top_k": 20}
+Response
+{  "task_id": "tsk_123",  "hits": [    {      "memory_id": "mem_1",      "type": "episodic",      "score": 0.91,      "text": "Ранее агент предпочитал сначала собирать факты"    }  ]}
+5. POST /v1/policy/select
+{  "task_id": "tsk_123",  "goal": "предсказать лучшее управленческое решение",  "context": {    "constraints": ["дефицит времени", "конфликт ролей"]  }}
+Response
+{  "task_id": "tsk_123",  "policy_id": "pol_12",  "strategy": "decompose_compare_score",  "subgoals": [    "analyze actors",    "enumerate options",    "simulate outcomes",    "score utility"  ]}
+6. POST /v1/reasoning/run
+{  "task_id": "tsk_123",  "mode": "multi_agent_deliberation",  "policy_id": "pol_12",  "memory_context": ["mem_1", "mem_2"],  "reasoning_agents": ["analyst", "critic", "strategist", "synthesizer"],  "max_rounds": 4,  "token_budget": 10000}
+Response
+{  "task_id": "tsk_123",  "status": "completed",  "rounds": 3,  "answer": {    "summary": "Оптимальное действие — частичный перенос срока и перераспределение работ",    "alternatives": [      "жесткая эскалация",      "полный перенос"    ]  },  "confidence": 0.83}
+7. POST /v1/evaluation/run
+{  "task_id": "tsk_123",  "result": {    "summary": "..."  },  "criteria": ["faithfulness", "consistency", "goal_alignment"]}
+Response
+{  "task_id": "tsk_123",  "quality_score": 0.84,  "faithfulness": 0.87,  "consistency": 0.81,  "goal_alignment": 0.88,  "pass": true}
+8. GET /v1/traces/{trace_id}
+Response
+{  "trace_id": "trc_333",  "task_id": "tsk_123",  "mode": "hybrid",  "events": [    "TASK_RECEIVED",    "TASK_CLASSIFIED",    "ROUTING_DECIDED",    "MEMORY_RETRIEVED",    "POLICY_SELECTED",    "REASONING_COMPLETED",    "EVALUATION_COMPLETED"  ],  "latency_ms": 5320,  "token_usage": {    "input": 4210,    "output": 1180  }}
+E. ER-модель
+1. Главные сущности
+TenantUserAgentProfileDigitalTwinScenarioTaskRoutingDecisionExecutionPlanMemoryItemPolicyReasoningRunToolCallEvaluationResultTraceEventLogSafetyDecision
+2. ER diagram
+3. Таблицы
+tenants
+id PKnamecreated_at
+agent_profiles
+id PKtenant_id FKuser_id FK NULLnamembtivalues_jsonskills_jsonmotivation_jsoncreated_atupdated_at
+digital_twins
+id PKagent_profile_id FKstate_jsonversioncreated_atupdated_at
+scenarios
+id PKtenant_id FKnameenvironment_jsonconstraints_jsoncreated_at
+tasks
+id PKtenant_id FKdigital_twin_id FKscenario_id FK NULLproduct_contextinput_jsonstatuscreated_atcompleted_at
+routing_decisions
+id PKtask_id FK UNIQUEtask_typecomplexityriskmodeselected_planes_jsonfallback_modereasoning_depthcreated_at
+execution_plans
+id PKtask_id FK UNIQUEpolicy_id FK NULLsteps_jsonstatuscreated_at
+memory_items
+id PKdigital_twin_id FKmemory_typetextembedding_refimportance_scorerelevance_tags_jsonsource_event_id FK NULLcreated_atlast_accessed_at
+policies
+id PKnamestrategyconfig_jsonversioncreated_at
+reasoning_runs
+id PKtask_id FKmoderoundsinput_tokensoutput_tokenslatency_msconfidenceresult_jsoncreated_at
+evaluation_results
+id PKtask_id FK UNIQUEquality_scorefaithfulnessconsistencygoal_alignmentpassdetails_jsoncreated_at
+traces
+id PKtask_id FK UNIQUEmodelatency_mstoken_inputtoken_outputquality_scorestatuscreated_at
+event_logs
+id PKtrace_id FKtask_id FKevent_typepayload_jsonoccurred_at
+safety_decisions
+id PKtask_id FKpolicy_namedecisionreasonrequires_humancreated_at
+F. Event schema
+1. Общий envelope
+{  "event_id": "evt_001",  "event_type": "TASK_CLASSIFIED",  "event_version": "1.0",  "occurred_at": "2026-03-17T20:10:11Z",  "tenant_id": "org_1",  "task_id": "tsk_123",  "trace_id": "trc_333",  "producer": "task-classifier",  "payload": {}}
+2. Список событий
+TASK_RECEIVEDTASK_CLASSIFIEDROUTING_DECIDEDMEMORY_RETRIEVAL_STARTEDMEMORY_RETRIEVAL_COMPLETEDPOLICY_SELECTEDREASONING_STARTEDREASONING_ROUND_COMPLETEDREASONING_COMPLETEDTOOL_CALL_STARTEDTOOL_CALL_COMPLETEDEVALUATION_STARTEDEVALUATION_COMPLETEDTRACE_WRITTENMEMORY_WRITEBACK_COMPLETEDSAFETY_CHECK_COMPLETEDHUMAN_ESCALATION_REQUESTEDTASK_COMPLETEDTASK_FAILEDFALLBACK_TRIGGERED
+3. Примеры payload
+TASK_CLASSIFIED
+{  "task_type": "simulation",  "complexity": "high",  "novelty": "medium",  "risk": "high",  "memory_need": "high",  "reasoning_need": "deep"}
+ROUTING_DECIDED
+{  "mode": "hybrid",  "selected_planes": ["caim", "mirrormind", "vgp2"],  "fallback_mode": "memory_augmented",  "reasoning_depth": 3}
+MEMORY_RETRIEVAL_COMPLETED
+{  "memory_profile": ["profile", "episodic", "reflection"],  "hits_count": 12,  "top_memory_ids": ["mem_1", "mem_2", "mem_7"]}
+REASONING_COMPLETED
+{  "mode": "multi_agent_deliberation",  "rounds": 3,  "confidence": 0.83,  "result_ref": "run_55"}
+EVALUATION_COMPLETED
+{  "quality_score": 0.84,  "faithfulness": 0.87,  "consistency": 0.81,  "goal_alignment": 0.88,  "pass": true}
+G. Sequence diagram
+1. Основной happy path
+2. Fallback path
+3. Human escalation path
+H. Приоритет реализации
+MVP v0.1
+POST /tasks/execute
+classifier
+router
+memory retrieval
+simple policy engine
+single reasoning run
+evaluation
+trace
+v0.2
+multi-agent deliberation
+safety layer
+fallback supervisor
+event bus
+writeback to memory
+v0.3
+adaptive routing
+learned policy tuning
+simulation-native execution mode
+A/B evals of routing rules
+I. Риски / метрики
+Архитектурные риски
+Router без явных правил → недетерминированное поведение.
+Memory overfetch → рост стоимости и падение точности.
+Policy/Reasoning coupling → черный ящик, невалидируемый.
+Trace не first-class → Test Machine теряет научную ценность.
+Нет idempotency → дубли событий и trace pollution.
+Метрики
+routing_accuracyfallback_ratememory_hit_ratetrace_completenessquality_pass_ratep95_latencytoken_cost_per_taskhuman_escalation_ratesimulation_reproducibility
+J. Минимальный implementation backlog
+1. Define OpenAPI spec2. Create DB schema + migrations3. Implement task-classifier4. Implement rule-based cognitive-router5. Implement memory retrieval contract6. Implement policy-engine v07. Implement reasoning-orchestrator v08. Implement evaluation-engine9. Implement trace-service10. Add event bus + event schemas11. Add safety-service12. Add fallback supervisor
+Итог
+В production-терминах это выглядит так:
+Product → Brain API       → Classify       → Route       → Retrieve Memory       → Select Policy       → Run Reasoning       → Evaluate       → Trace       → Write Back
+Именно этот слой превращает твой стек из набора сильных идей в операционную когнитивную платформу.

@@ -29,6 +29,7 @@
 - [[agent-personas]]
 - [[long-term-memory]]
 - [[subagents]]
+- [[profile-isolation]]
 
 ## Sources
 

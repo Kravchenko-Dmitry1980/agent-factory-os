@@ -10,10 +10,16 @@ Core concepts for agent engineering knowledge base.
 - [harness](harness.md)
 - [execution-loops](execution-loops.md)
 - [verification](verification.md)
+- [visual-verification](visual-verification.md)
 - [planning](planning.md)
 - [orchestration](orchestration.md)
 - [six-abstractions](six-abstractions.md)
 - [golden-path](golden-path.md)
+
+## Semantic clusters
+
+- [verification](../graph/cluster-indexes/verification-cluster.md)
+- [gui-modality](../graph/cluster-indexes/gui-modality-cluster.md) (visual-verification)
 
 ## Up
 
