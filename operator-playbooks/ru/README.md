@@ -26,6 +26,7 @@
 | [../../demos/review-assistant-hands-on/DEMO_SUMMARY_FOR_DMITRY_RU.md](../../demos/review-assistant-hands-on/DEMO_SUMMARY_FOR_DMITRY_RU.md) | Hands-on: что реально запускалось (Phase 3.5.1) |
 | [../../demos/review-assistant-runner/USAGE_RU.md](../../demos/review-assistant-runner/USAGE_RU.md) | Demo Runner v0.1 — меню и русское резюме (FROZEN_WITH_NOTES) |
 | [../../demos/review-assistant-runner/freeze/README.md](../../demos/review-assistant-runner/freeze/README.md) | Freeze records demo-runner-v0.1 |
+| [../../governance/phase-3-5-3-plan/README.md](../../governance/phase-3-5-3-plan/README.md) | План Free-Form CLI — свой текст задачи (Phase 3.5.3-Plan) |
 | [../../governance/phase-3-5-2-plan/README.md](../../governance/phase-3-5-2-plan/README.md) | План Demo Runner (Phase 3.5.2-Plan) |
 
 ---

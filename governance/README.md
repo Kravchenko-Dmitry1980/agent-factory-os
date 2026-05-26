@@ -1,6 +1,6 @@
 # Governance Index
 
-**Updated:** 2026-05-26 (Phase 3.5.2-Freeze added)
+**Updated:** 2026-05-26 (Phase 3.5.3-Plan added)
 
 ---
 
@@ -50,6 +50,8 @@
 | [PHASE_3_5_2_DEMO_RUNNER_PLAN_REVIEW.md](PHASE_3_5_2_DEMO_RUNNER_PLAN_REVIEW.md) | **Phase 3.5.2-Plan** — Demo Runner plan review (PASS_WITH_NOTES) |
 | [PHASE_3_5_2_DEMO_RUNNER_IMPL_REVIEW.md](PHASE_3_5_2_DEMO_RUNNER_IMPL_REVIEW.md) | **Phase 3.5.2-Impl** — Demo Runner impl (PASS_WITH_NOTES) |
 | [PHASE_3_5_2_FREEZE_DEMO_RUNNER_V0_1_REVIEW.md](PHASE_3_5_2_FREEZE_DEMO_RUNNER_V0_1_REVIEW.md) | **Phase 3.5.2-Freeze** — Demo Runner v0.1 frozen (PASS_WITH_NOTES) |
+| [phase-3-5-3-plan/README.md](phase-3-5-3-plan/README.md) | **Phase 3.5.3-Plan** — Interactive Free-Form CLI (plan only) |
+| [PHASE_3_5_3_FREE_FORM_CLI_PLAN_REVIEW.md](PHASE_3_5_3_FREE_FORM_CLI_PLAN_REVIEW.md) | **Phase 3.5.3-Plan** — Free-Form CLI plan review (PASS_WITH_NOTES) |
 | [../demos/review-assistant-runner/freeze/README.md](../demos/review-assistant-runner/freeze/README.md) | Demo Runner v0.1 freeze index |
 | [../demos/review-assistant-hands-on/README.md](../demos/review-assistant-hands-on/README.md) | Hands-on demo walkthrough (RU) |
 | [../demos/review-assistant-runner/README.md](../demos/review-assistant-runner/README.md) | Demo Runner v0.1 — FROZEN_WITH_NOTES |

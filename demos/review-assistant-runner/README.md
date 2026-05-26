@@ -19,6 +19,8 @@ Freeze records: [freeze/README.md](freeze/README.md)
 
 Governance: [../../governance/PHASE_3_5_2_FREEZE_DEMO_RUNNER_V0_1_REVIEW.md](../../governance/PHASE_3_5_2_FREEZE_DEMO_RUNNER_V0_1_REVIEW.md)
 
+**Planned next (not built):** Interactive Free-Form CLI — [../../governance/phase-3-5-3-plan/README.md](../../governance/phase-3-5-3-plan/README.md) (separate script; does not modify this runner)
+
 ---
 
 ## What it is

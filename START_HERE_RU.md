@@ -65,7 +65,7 @@ python demos/review-assistant-runner/demo_runner.py
 python demos/review-assistant-runner/demo_runner.py --scenario happy
 ```
 
-**Planned (not built):** Phase 3.5.3+ — см. [governance/phase-3-5-2-plan/README.md](governance/phase-3-5-2-plan/README.md)
+**Planned (not built):** Free-Form CLI — ввод своей задачи — [governance/phase-3-5-3-plan/README.md](governance/phase-3-5-3-plan/README.md)
 
 Опционально — сводка статуса:
 
@@ -122,6 +122,7 @@ python evaluation/scripts/summarize_evaluation_status.py
 | [demos/review-assistant-hands-on/README.md](demos/review-assistant-hands-on/README.md) | Hands-on demo Review Assistant (Phase 3.5.1) |
 | [demos/review-assistant-runner/README.md](demos/review-assistant-runner/README.md) | Demo Runner v0.1 — FROZEN_WITH_NOTES (Phase 3.5.2) |
 | [demos/review-assistant-runner/freeze/README.md](demos/review-assistant-runner/freeze/README.md) | Freeze records demo-runner-v0.1 |
+| [governance/phase-3-5-3-plan/README.md](governance/phase-3-5-3-plan/README.md) | Free-Form CLI plan (Phase 3.5.3-Plan, not built) |
 | [curriculum/ru/README.md](curriculum/ru/README.md) | Учебная программа |
 | [operator-playbooks/ru/README.md](operator-playbooks/ru/README.md) | Мост для оператора |
 | [governance/PHASE_3_START_CONDITIONS.md](governance/PHASE_3_START_CONDITIONS.md) | Условия старта Phase 3 |
