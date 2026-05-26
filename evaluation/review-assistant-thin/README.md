@@ -83,6 +83,23 @@ Expected: `Summary: PASS=2 FAIL=0` (no network)
 
 ---
 
+## Provider safety eval (Phase 3.4)
+
+```powershell
+python evaluation/scripts/check_review_assistant_provider_safety.py
+```
+
+Expected: `Summary: PASS=16 FAIL=0` (no network, no provider calls)
+
+| File | Purpose |
+|------|---------|
+| [provider-safety/README.md](provider-safety/README.md) | Harness overview |
+| [provider-safety/provider-safety-cases.md](provider-safety/provider-safety-cases.md) | 16 synthetic cases (groups A–G) |
+| [provider-safety/harness-limitations.md](provider-safety/harness-limitations.md) | Scope limits |
+| [provider-safety/freeze/README.md](provider-safety/freeze/README.md) | **Frozen v0.1** — provider-safety-harness-v0.1 |
+
+---
+
 ## Impl freeze
 
 **Current:** [review-assistant-thin-v0.3](../../prototypes-derived/review-assistant-thin/freeze/V0_3_SCENARIO_BASELINE.md)

@@ -126,6 +126,10 @@ python evaluation/scripts/check_review_assistant_llm_mock.py
 # Phase 3.3 — Review Assistant real provider contract (2 no-network scenarios)
 python evaluation/scripts/check_review_assistant_real_provider_contract.py
 
+# Phase 3.4 — Review Assistant provider safety harness (16 synthetic cases, no network)
+python evaluation/scripts/check_review_assistant_provider_safety.py
+# Frozen: provider-safety-harness-v0.1 — see evaluation/review-assistant-thin/provider-safety/freeze/
+
 # Phase 3.3-LiveCheck — optional live provider (LM Studio; see live-provider-checklist.md)
 # $env:RA_LLM_BASE_URL = "http://127.0.0.1:1234"
 # python evaluation/scripts/check_review_assistant_real_provider_contract.py --real-provider
