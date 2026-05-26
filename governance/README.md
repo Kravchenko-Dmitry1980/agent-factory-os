@@ -1,6 +1,6 @@
 # Governance Index
 
-**Updated:** 2026-05-25 (Phase 2.9 cleanup added)
+**Updated:** 2026-05-26 (Phase 3.4-Plan added)
 
 ---
 
@@ -35,6 +35,9 @@
 | [phase-3-3-livecheck/README.md](phase-3-3-livecheck/README.md) | **Phase 3.3-LiveCheck** — LM Studio manual validation (docs only) |
 | [PHASE_3_3_LIVE_PROVIDER_CHECK_REVIEW.md](PHASE_3_3_LIVE_PROVIDER_CHECK_REVIEW.md) | **Phase 3.3-LiveCheck** — live provider check (LIVE_CHECK_PASS) |
 | [PHASE_3_3_1_FREEZE_REAL_PROVIDER_V0_3_REVIEW.md](PHASE_3_3_1_FREEZE_REAL_PROVIDER_V0_3_REVIEW.md) | **Phase 3.3.1** — freeze real provider v0.3 (PASS_WITH_NOTES) |
+| [phase-3-4-plan/README.md](phase-3-4-plan/README.md) | **Phase 3.4-Plan** — provider safety evaluation / prompt injection harness (plan only) |
+| [phase-3-4-plan/FINAL_PHASE_3_4_PLAN_REPORT.md](phase-3-4-plan/FINAL_PHASE_3_4_PLAN_REPORT.md) | Safety harness plan — no code, no benchmark, no red-team platform |
+| [phase-3-4-plan/PHASE_3_4_GO_NO_GO.md](phase-3-4-plan/PHASE_3_4_GO_NO_GO.md) | CONDITIONAL_GO for future minimal safety harness impl |
 | [../prototypes-derived/review-assistant-thin/README.md](../prototypes-derived/review-assistant-thin/README.md) | Review Assistant thin demo |
 | [../agent-builder-kit/README.md](../agent-builder-kit/README.md) | Agent Builder Kit v0.1 specs |
 | [PHASE_1_4_CONSOLIDATION_REPORT.md](PHASE_1_4_CONSOLIDATION_REPORT.md) | Phase 1.4 deliverables & validation |
