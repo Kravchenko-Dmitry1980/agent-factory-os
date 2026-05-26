@@ -11,6 +11,7 @@ Engineering knowledge operating system for AI agents.
 | Operators | [operator-playbooks/README.md](operator-playbooks/README.md) · [operator-playbooks/ru/](operator-playbooks/ru/) |
 | Students | [curriculum/README.md](curriculum/README.md) · [curriculum/ru/](curriculum/ru/) |
 | Phase 3 gate | [governance/PHASE_3_START_CONDITIONS.md](governance/PHASE_3_START_CONDITIONS.md) · [PHASE_3_WARNING_RU.md](PHASE_3_WARNING_RU.md) |
+| Phase 3.0 kit | [agent-builder-kit/README.md](agent-builder-kit/README.md) · [agent-builder-kit/RU_SUMMARY.md](agent-builder-kit/RU_SUMMARY.md) |
 
 ## Structure
 

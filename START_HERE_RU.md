@@ -107,6 +107,10 @@ python evaluation/scripts/summarize_evaluation_status.py
 | [curriculum/ru/README.md](curriculum/ru/README.md) | Учебная программа |
 | [operator-playbooks/ru/README.md](operator-playbooks/ru/README.md) | Мост для оператора |
 | [governance/PHASE_3_START_CONDITIONS.md](governance/PHASE_3_START_CONDITIONS.md) | Условия старта Phase 3 |
+| [agent-builder-kit/RU_SUMMARY.md](agent-builder-kit/RU_SUMMARY.md) | Agent Builder Kit v0.1 (спеки, Phase 3.0) |
+| [governance/PHASE_3_0_BUILDER_KIT_REVIEW.md](governance/PHASE_3_0_BUILDER_KIT_REVIEW.md) | Review Phase 3.0 |
 | [governance/phase-2-8/FINAL_PHASE_2_8_REPORT.md](governance/phase-2-8/FINAL_PHASE_2_8_REPORT.md) | Аудит готовности |
+| [governance/phase-2-10/FINAL_PHASE_2_10_REPORT.md](governance/phase-2-10/FINAL_PHASE_2_10_REPORT.md) | Внешние репо — только исследование |
+| [external-repos-triage/README.md](external-repos-triage/README.md) | Triage внешних skills/templates |
 
 English entry: [README.md](README.md) → [agent-os/README.md](agent-os/README.md)

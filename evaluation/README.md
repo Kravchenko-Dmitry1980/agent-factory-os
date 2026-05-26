@@ -101,6 +101,7 @@ This layer **protects governance invariants**, not throughput or uptime.
 | [manual-review/](manual-review/) | Human reviewer guidance |
 | [failure-injection/](failure-injection/) | Intentional failure cases |
 | [scripts/](scripts/) | Simple local Python helpers |
+| [review-assistant-thin/](review-assistant-thin/) | **Phase 3.1.1** — thin demo scenario checks (not CI) |
 | [diagrams/](diagrams/) | Mermaid evaluation flows |
 | [governance/](governance/) | Boundaries and anti-drift rules |
 | [reports/](reports/) | Placeholder for local evaluation notes |
@@ -115,6 +116,12 @@ python evaluation/scripts/run_demo_smoke_checks.py
 
 # Verify example traces contain required events
 python evaluation/scripts/check_expected_text_traces.py
+
+# Phase 3.1.1 — Review Assistant thin (5 scenarios)
+python evaluation/scripts/check_review_assistant_thin.py
+
+# Phase 3.2 — Review Assistant mock LLM (5 scenarios)
+python evaluation/scripts/check_review_assistant_llm_mock.py
 
 # Summary of scenarios, gates, and coverage
 python evaluation/scripts/summarize_evaluation_status.py

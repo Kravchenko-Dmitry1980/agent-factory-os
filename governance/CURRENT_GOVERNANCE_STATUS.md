@@ -12,6 +12,7 @@ Read in this order for **decisions**:
 | Priority | Document | Decides |
 |----------|----------|---------|
 | 1 | [phase-2-8/FINAL_PHASE_2_8_REPORT.md](phase-2-8/FINAL_PHASE_2_8_REPORT.md) | Phase 3 verdict — **CONDITIONAL GO** |
+| 1b | [phase-2-10/FINAL_PHASE_2_10_REPORT.md](phase-2-10/FINAL_PHASE_2_10_REPORT.md) | External repos — **research-only, no adoption** |
 | 2 | [phase-2-8/PHASE_3_GO_NO_GO.md](phase-2-8/PHASE_3_GO_NO_GO.md) | GO / conditions / NO-GO triggers |
 | 3 | [phase-2-8/PHASE_3_MINIMAL_SCOPE.md](phase-2-8/PHASE_3_MINIMAL_SCOPE.md) | Agent Builder Kit v0.1 only |
 | 4 | [phase-2-8/PHASE_3_FREEZE_POLICY.md](phase-2-8/PHASE_3_FREEZE_POLICY.md) | What is frozen |

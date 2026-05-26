@@ -14,6 +14,21 @@
 | [phase-2-8/README.md](phase-2-8/README.md) | Phase 2.8 readiness audit |
 | [phase-2-8/FINAL_PHASE_2_8_REPORT.md](phase-2-8/FINAL_PHASE_2_8_REPORT.md) | **CONDITIONAL GO** |
 | [PHASE_2_9_CLEANUP_REVIEW.md](PHASE_2_9_CLEANUP_REVIEW.md) | Phase 2.9 cleanup review |
+| [phase-2-10/README.md](phase-2-10/README.md) | **Phase 2.10** — external repos triage (research-only) |
+| [phase-2-10/FINAL_PHASE_2_10_REPORT.md](phase-2-10/FINAL_PHASE_2_10_REPORT.md) | External repos — no adoption |
+| [PHASE_3_0_BUILDER_KIT_REVIEW.md](PHASE_3_0_BUILDER_KIT_REVIEW.md) | **Phase 3.0** — Builder Kit v0.1 review (PASS) |
+| [PHASE_3_0_FREEZE_REVIEW_ASSISTANT.md](PHASE_3_0_FREEZE_REVIEW_ASSISTANT.md) | **Phase 3.0-Freeze** — Review Assistant v0.1 frozen |
+| [PHASE_3_1_PRECONDITIONS.md](PHASE_3_1_PRECONDITIONS.md) | Gates before Phase 3.1 code |
+| [phase-3-1-plan/README.md](phase-3-1-plan/README.md) | **Phase 3.1-Plan** — thin implementation plan (no code) |
+| [phase-3-1-plan/PHASE_3_1_GO_NO_GO.md](phase-3-1-plan/PHASE_3_1_GO_NO_GO.md) | CONDITIONAL_GO for future impl |
+| [PHASE_3_1_REVIEW_ASSISTANT_THIN_REVIEW.md](PHASE_3_1_REVIEW_ASSISTANT_THIN_REVIEW.md) | **Phase 3.1** — thin impl review (PASS_WITH_NOTES) |
+| [PHASE_3_1_1_FREEZE_HARDEN_REVIEW.md](PHASE_3_1_1_FREEZE_HARDEN_REVIEW.md) | **Phase 3.1.1** — freeze + harden (PASS_WITH_NOTES) |
+| [phase-3-2-plan/README.md](phase-3-2-plan/README.md) | **Phase 3.2-Plan** — LLM adapter vs second template |
+| [phase-3-2-plan/RECOMMENDED_NEXT_STEP.md](phase-3-2-plan/RECOMMENDED_NEXT_STEP.md) | Option A recommended (mock-first) |
+| [PHASE_3_2_MOCK_LLM_ADAPTER_REVIEW.md](PHASE_3_2_MOCK_LLM_ADAPTER_REVIEW.md) | **Phase 3.2** — mock LLM adapter (PASS_WITH_NOTES) |
+| [PHASE_3_2_1_FREEZE_MOCK_LLM_V0_2_REVIEW.md](PHASE_3_2_1_FREEZE_MOCK_LLM_V0_2_REVIEW.md) | **Phase 3.2.1** — freeze mock LLM v0.2 (PASS_WITH_NOTES) |
+| [../prototypes-derived/review-assistant-thin/README.md](../prototypes-derived/review-assistant-thin/README.md) | Review Assistant thin demo |
+| [../agent-builder-kit/README.md](../agent-builder-kit/README.md) | Agent Builder Kit v0.1 specs |
 | [PHASE_1_4_CONSOLIDATION_REPORT.md](PHASE_1_4_CONSOLIDATION_REPORT.md) | Phase 1.4 deliverables & validation |
 | [REAUDIT_2026_05_25.md](REAUDIT_2026_05_25.md) | Full re-audit verdict (pre-1.4) |
 | [SYSTEM_STATE_AFTER_1_3.md](SYSTEM_STATE_AFTER_1_3.md) | Inventory snapshot |

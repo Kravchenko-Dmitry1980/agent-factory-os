@@ -7,3 +7,6 @@ Thumbs.db
 .DS_Store
 *.log
 integrations-real/.data/
+
+# Phase 2.10 external triage clones (local research only; reports are in repo-reviews/)
+external-repos-triage/source/
