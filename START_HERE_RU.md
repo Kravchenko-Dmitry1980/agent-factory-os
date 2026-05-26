@@ -34,10 +34,11 @@
 1. Прочитайте этот файл — **START_HERE_RU.md**
 2. Откройте [curriculum/ru/student-guides/student-start-here.md](curriculum/ru/student-guides/student-start-here.md)
 3. Быстрый запуск: [QUICKSTART_RU.md](QUICKSTART_RU.md)
-4. Запустите review-loop demo (команды ниже)
+4. Запустите review-loop demo **или** Review Assistant thin (команды ниже)
 5. Запустите evaluation smoke check
 6. Прочитайте один пример trace: `observability/examples/successful-review-trace.txt`
-7. Перед Phase 3: [PHASE_3_WARNING_RU.md](PHASE_3_WARNING_RU.md)
+7. **Hands-on отчёт (Phase 3.5.1):** [demos/review-assistant-hands-on/DEMO_SUMMARY_FOR_DMITRY_RU.md](demos/review-assistant-hands-on/DEMO_SUMMARY_FOR_DMITRY_RU.md)
+8. Перед Phase 3: [PHASE_3_WARNING_RU.md](PHASE_3_WARNING_RU.md)
 
 Полная картина Phase 2: [PHASE_2_SUMMARY_RU.md](PHASE_2_SUMMARY_RU.md)
 
@@ -48,9 +49,12 @@
 ```powershell
 cd C:\Dima\Projects\CURSOR\AGENT
 python prototypes/review-loop-agent/minimal-demo.py --scenario happy
+python prototypes-derived/review-assistant-thin/minimal_demo.py --scenario happy
 python evaluation/scripts/run_demo_smoke_checks.py
 python evaluation/scripts/check_expected_text_traces.py
 ```
+
+**Review Assistant thin (Phase 3.1+):** полный hands-on walkthrough — [demos/review-assistant-hands-on/README.md](demos/review-assistant-hands-on/README.md)
 
 Опционально — сводка статуса:
 
@@ -104,6 +108,7 @@ python evaluation/scripts/summarize_evaluation_status.py
 | Документ | Зачем |
 |----------|-------|
 | [QUICKSTART_RU.md](QUICKSTART_RU.md) | Одна страница — быстрый запуск |
+| [demos/review-assistant-hands-on/README.md](demos/review-assistant-hands-on/README.md) | Hands-on demo Review Assistant (Phase 3.5.1) |
 | [curriculum/ru/README.md](curriculum/ru/README.md) | Учебная программа |
 | [operator-playbooks/ru/README.md](operator-playbooks/ru/README.md) | Мост для оператора |
 | [governance/PHASE_3_START_CONDITIONS.md](governance/PHASE_3_START_CONDITIONS.md) | Условия старта Phase 3 |

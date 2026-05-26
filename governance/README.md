@@ -1,6 +1,6 @@
 # Governance Index
 
-**Updated:** 2026-05-26 (Phase 3.5-Freeze complete)
+**Updated:** 2026-05-26 (Phase 3.5.1 hands-on demo report)
 
 ---
 
@@ -45,6 +45,8 @@
 | [phase-3-5-plan/PHASE_3_5_GO_NO_GO.md](phase-3-5-plan/PHASE_3_5_GO_NO_GO.md) | CONDITIONAL_GO_FOR_SPECS_ONLY |
 | [PHASE_3_5_TASK_TRIAGE_AGENT_SPECS_REVIEW.md](PHASE_3_5_TASK_TRIAGE_AGENT_SPECS_REVIEW.md) | **Phase 3.5-Impl** — Task Triage Agent specs (PASS_WITH_NOTES) |
 | [PHASE_3_5_FREEZE_TASK_TRIAGE_AGENT_SPECS_V0_1_REVIEW.md](PHASE_3_5_FREEZE_TASK_TRIAGE_AGENT_SPECS_V0_1_REVIEW.md) | **Phase 3.5-Freeze** — Task Triage specs v0.1 frozen (PASS_WITH_NOTES) |
+| [PHASE_3_5_1_HANDS_ON_DEMO_REPORT_REVIEW.md](PHASE_3_5_1_HANDS_ON_DEMO_REPORT_REVIEW.md) | **Phase 3.5.1** — Review Assistant hands-on demo report (PASS_WITH_NOTES) |
+| [../demos/review-assistant-hands-on/README.md](../demos/review-assistant-hands-on/README.md) | Hands-on demo walkthrough (RU) |
 | [../agent-builder-kit/templates/task-triage-agent/README.md](../agent-builder-kit/templates/task-triage-agent/README.md) | Task Triage Agent template v0.1 (FROZEN_WITH_NOTES) |
 | [../prototypes-derived/review-assistant-thin/README.md](../prototypes-derived/review-assistant-thin/README.md) | Review Assistant thin demo |
 | [../agent-builder-kit/README.md](../agent-builder-kit/README.md) | Agent Builder Kit v0.1 specs |

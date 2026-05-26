@@ -23,6 +23,7 @@
 | [ERRORS.md](ERRORS.md) | Типичные ошибки |
 | [SAFE_CHANGE_SHORT_GUIDE.md](SAFE_CHANGE_SHORT_GUIDE.md) | Коротко про безопасные изменения |
 | [WHAT_NOT_TO_DO.md](WHAT_NOT_TO_DO.md) | Запреты для новичка |
+| [../../demos/review-assistant-hands-on/DEMO_SUMMARY_FOR_DMITRY_RU.md](../../demos/review-assistant-hands-on/DEMO_SUMMARY_FOR_DMITRY_RU.md) | Hands-on: что реально запускалось (Phase 3.5.1) |
 
 ---
 
