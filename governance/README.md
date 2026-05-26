@@ -27,6 +27,8 @@
 | [phase-3-2-plan/RECOMMENDED_NEXT_STEP.md](phase-3-2-plan/RECOMMENDED_NEXT_STEP.md) | Option A recommended (mock-first) |
 | [PHASE_3_2_MOCK_LLM_ADAPTER_REVIEW.md](PHASE_3_2_MOCK_LLM_ADAPTER_REVIEW.md) | **Phase 3.2** — mock LLM adapter (PASS_WITH_NOTES) |
 | [PHASE_3_2_1_FREEZE_MOCK_LLM_V0_2_REVIEW.md](PHASE_3_2_1_FREEZE_MOCK_LLM_V0_2_REVIEW.md) | **Phase 3.2.1** — freeze mock LLM v0.2 (PASS_WITH_NOTES) |
+| [phase-3-2-2/README.md](phase-3-2-2/README.md) | **Phase 3.2.2** — Hermes Desktop delta triage (research-only) |
+| [phase-3-2-2/FINAL_PHASE_3_2_2_REPORT.md](phase-3-2-2/FINAL_PHASE_3_2_2_REPORT.md) | Hermes Desktop — no adoption; Operator Console backlog |
 | [../prototypes-derived/review-assistant-thin/README.md](../prototypes-derived/review-assistant-thin/README.md) | Review Assistant thin demo |
 | [../agent-builder-kit/README.md](../agent-builder-kit/README.md) | Agent Builder Kit v0.1 specs |
 | [PHASE_1_4_CONSOLIDATION_REPORT.md](PHASE_1_4_CONSOLIDATION_REPORT.md) | Phase 1.4 deliverables & validation |

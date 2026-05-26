@@ -46,6 +46,22 @@
 | SuperClaude_Framework | 226c45c | `source/SuperClaude_Framework/` |
 | claude-code-action | 787c5a0 | `source/claude-code-action/` |
 | claude-code-templates | a8f3752 | `source/claude-code-templates/` |
+| hermes-desktop | 075e516 | `source/hermes-desktop/` |
+| hermes-desktop-ru | 2bbe940 | `source/hermes-desktop-ru/` |
+
+> Phase 3.2.2: Hermes Desktop triage — [hermes-desktop-delta/](hermes-desktop-delta/README.md). **Code not executed.**
+
+---
+
+## Hermes Desktop delta (Phase 3.2.2)
+
+| Doc | Purpose |
+|-----|---------|
+| [hermes-desktop-delta/README.md](hermes-desktop-delta/README.md) | Triage index |
+| [hermes-desktop-delta/repo-reviews/](hermes-desktop-delta/repo-reviews/) | Upstream + RU fork reviews |
+| [../governance/phase-3-2-2/FINAL_PHASE_3_2_2_REPORT.md](../governance/phase-3-2-2/FINAL_PHASE_3_2_2_REPORT.md) | Final report |
+
+Research-only — no adoption, no Operator Console build.
 
 > Клоны большие (особенно templates, ruflo). Для git рассмотрите `external-repos-triage/source/` в `.gitignore` — отчёты в `repo-reviews/` и `governance/phase-2-10/` самодостаточны.
 
