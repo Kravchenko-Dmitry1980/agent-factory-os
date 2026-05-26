@@ -52,7 +52,9 @@ Phase 2 delivered prototypes, observability, evaluation, and governance. Phase 3
 
 ---
 
-## First supported template
+## Supported templates
+
+### Review Assistant Agent (first reference)
 
 **[Review Assistant Agent](templates/review-assistant-agent/README.md)** — drafts content and prepares it for human review. Does **not** auto-publish.
 
@@ -61,6 +63,16 @@ Phase 2 delivered prototypes, observability, evaluation, and governance. Phase 3
 **Phase 3.1 plan (no code yet):** [governance/phase-3-1-plan/](../governance/phase-3-1-plan/README.md)
 
 **Phase 3.1 implementation:** [prototypes-derived/review-assistant-thin/](../prototypes-derived/review-assistant-thin/README.md) · [review](../governance/PHASE_3_1_REVIEW_ASSISTANT_THIN_REVIEW.md) · **frozen v0.1** · [3.1.1 harden](../governance/PHASE_3_1_1_FREEZE_HARDEN_REVIEW.md)
+
+### Task Triage Agent (second reference — specs only)
+
+**[Task Triage Agent](templates/task-triage-agent/README.md)** — classifies incoming tasks, detects risk and missing information, recommends safe next steps. Does **not** execute or orchestrate.
+
+**Status (2026-05-26):** v0.1 **FROZEN_WITH_NOTES** · **SIGNED_OFF_WITH_NOTES** — [sign-off bundle](templates/task-triage-agent/sign-off/README.md) · [freeze review](../governance/PHASE_3_5_FREEZE_TASK_TRIAGE_AGENT_SPECS_V0_1_REVIEW.md)
+
+Implementation: **NOT_STARTED**. Phase 3.6-Plan required before any code.
+
+**Phase 3.5-Plan:** [governance/phase-3-5-plan/](../governance/phase-3-5-plan/README.md)
 
 ---
 
