@@ -64,6 +64,26 @@ Terminal: COMPLETED (delivered), FAILED, BLOCKED, ESCALATED
 
 **LLM mock (Phase 3.2):** `llm_request_started`, `llm_response_received`, `llm_parse_passed`, `llm_parse_failed`, `llm_timeout`, `llm_uncertain`, `llm_unsafe_output`
 
+**Real provider (Phase 3.3):** `provider_request_prepared`, `provider_disabled`, `provider_config_missing`, `provider_request_started`, `provider_response_received`, `provider_parse_passed`, `provider_parse_failed`, `provider_timeout`, `provider_error`, `provider_rate_limited`, `provider_unsafe_output`, `provider_uncertain_output`
+
+## Real provider contract (Phase 3.3)
+
+| Input | Notes |
+|-------|-------|
+| `task_text` | Synthetic only for real mode |
+| `provider_mode` | real only with `--real-provider` |
+| `RA_LLM_BASE_URL` | Required for network |
+| `RA_LLM_API_KEY` | Optional |
+| `RA_LLM_MODEL` | Optional |
+
+| Output state | Meaning |
+|--------------|---------|
+| PROVIDER_DISABLED | No `--real-provider` flag |
+| PROVIDER_CONFIG_MISSING | Missing base URL |
+| PROVIDER_PARSE_FAILED | Malformed live response |
+| PROVIDER_TIMEOUT | Escalate, no fallback draft |
+| PROVIDER_ERROR | Fail closed |
+
 ## Failure states
 
 | State | Trigger |
@@ -75,5 +95,10 @@ Terminal: COMPLETED (delivered), FAILED, BLOCKED, ESCALATED
 | LLM_TIMEOUT | mock timeout — no fallback draft |
 | LLM_UNSAFE | unsafe mock content |
 | LLM_UNCERTAIN | uncertain flag — escalate |
+| PROVIDER_DISABLED | real flag not set |
+| PROVIDER_CONFIG_MISSING | RA_LLM_BASE_URL missing |
+| PROVIDER_PARSE_FAILED | live response invalid |
+| PROVIDER_TIMEOUT | network timeout — escalate |
+| PROVIDER_UNSAFE | unsafe live content |
 
 Aligned with frozen template and `prototypes/review-loop-agent/contracts.md` (reference).

@@ -72,6 +72,22 @@ Expected: PASS=12 FAIL=0, PASS=6 FAIL=0
 
 ## Unsafe cases must block
 
-Any scenario with `delivered=True` except `happy` and `llm_valid_draft` → **FAIL**.
+Any scenario with `delivered=True` except `happy`, `llm_valid_draft`, and `real_provider_synthetic` (live only) → **FAIL**.
+
+## Real provider contract (Phase 3.3)
+
+```powershell
+python evaluation/scripts/check_review_assistant_real_provider_contract.py
+```
+
+Expected (default): `PASS=2 FAIL=0` — no network.
+
+Optional live:
+
+```powershell
+python evaluation/scripts/check_review_assistant_real_provider_contract.py --real-provider
+```
+
+Requires `RA_LLM_BASE_URL`. See [real-provider-scenario-checklist.md](../../evaluation/review-assistant-thin/real-provider-scenario-checklist.md).
 
 No auto-publish without `approval_granted`.

@@ -45,6 +45,21 @@ task_started
 7. **No fallback draft on timeout**
 8. **Unsafe LLM output blocked before verification**
 
-## Mock only
+## Mock only (default)
 
-Draft from local dict payloads. See [llm_boundary.md](llm_boundary.md). No network.
+Draft from local dict payloads. See [llm_boundary.md](llm_boundary.md). No network by default.
+
+## Real provider flow (Phase 3.3 — opt-in)
+
+```text
+task_started
+  → provider_request_prepared
+  → provider_disabled | provider_config_missing | provider_request_started
+  → provider_response_received
+  → provider_parse_* → draft_created (if ok)
+  → verification → approval → task_completed | task_failed
+```
+
+**Disabled by default:** no `--real-provider` → no network for real scenarios.
+
+See [real_provider_boundary.md](real_provider_boundary.md).

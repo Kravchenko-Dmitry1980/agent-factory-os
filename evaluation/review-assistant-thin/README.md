@@ -66,6 +66,22 @@ Expected: `Summary: PASS=5 FAIL=0`
 
 ---
 
+## Real provider eval (Phase 3.3)
+
+```powershell
+python evaluation/scripts/check_review_assistant_real_provider_contract.py
+```
+
+Expected: `Summary: PASS=2 FAIL=0` (no network)
+
+| File | Purpose |
+|------|---------|
+| [real-provider-scenario-checklist.md](real-provider-scenario-checklist.md) | Real provider checklist |
+| [real-provider-expected-events.md](real-provider-expected-events.md) | Event substrings |
+| [real-provider-hardening-notes.md](real-provider-hardening-notes.md) | Scope limits |
+
+---
+
 ## Impl freeze
 
 **Current:** [review-assistant-thin-v0.2](../../prototypes-derived/review-assistant-thin/freeze/V0_2_SCENARIO_BASELINE.md)

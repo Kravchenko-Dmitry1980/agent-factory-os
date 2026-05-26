@@ -37,6 +37,17 @@
 
 Revert `minimal_demo.py` to pre-LLM commit or remove LLM scenarios/functions while keeping original 5 scenarios. Remove `check_review_assistant_llm_mock.py` if full LLM rollback. Re-run thin check PASS=5.
 
+## Rollback real provider (Phase 3.3)
+
+1. Remove `--real-provider` usage
+2. Revert Phase 3.3 commits to `minimal_demo.py` (provider functions)
+3. Remove `check_review_assistant_real_provider_contract.py` if full rollback
+4. Keep mock v0.2 scenarios passing
+5. Re-run all baseline checks (thin, llm mock, contract, smoke, trace)
+6. Document in governance
+
+Mock baseline must remain PASS=5 + PASS=5 without network.
+
 ## Steps (full rollback)
 
 ```powershell

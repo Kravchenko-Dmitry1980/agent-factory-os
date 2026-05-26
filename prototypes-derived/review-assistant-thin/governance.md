@@ -27,6 +27,15 @@
 - **No model router / RAG / MCP**
 - **Explicit approval required** for future real provider ([PRECONDITIONS_FOR_3_2_IMPLEMENTATION.md](../../governance/phase-3-2-plan/PRECONDITIONS_FOR_3_2_IMPLEMENTATION.md))
 
+## Phase 3.3 real provider rules
+
+- **No real provider by default** — mock/legacy default; `--real-provider` opt-in
+- **One local OpenAI-compatible endpoint** — `RA_LLM_BASE_URL` only
+- **No provider framework** — no registry/router/SDK
+- **Synthetic data only** — hardcoded prompt for real mode
+- **No sensitive data** — see [governance/phase-3-3-plan/FORBIDDEN_DATA_POLICY.md](../../governance/phase-3-3-plan/FORBIDDEN_DATA_POLICY.md)
+- **Stdlib only** — urllib, no pip deps
+
 ## Scope lock
 
 Implements **only** frozen Review Assistant v0.1 semantics — not a platform.

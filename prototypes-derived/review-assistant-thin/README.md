@@ -1,13 +1,14 @@
-# Review Assistant Thin — Phase 3.1 + 3.2 Mock LLM
+# Review Assistant Thin — Phase 3.1 + 3.2 Mock + 3.3 Real Provider (opt-in)
 
-Minimal local implementation of frozen **Review Assistant Agent v0.1** with **mock LLM boundary** (no real API).
+Minimal local implementation of frozen **Review Assistant Agent v0.1** with **mock LLM boundary** (default) and **optional real local provider** (Phase 3.3).
 
 ---
 
 ## What this does
 
 - Accepts a task (scenario-driven)
-- **Mock LLM path (Phase 3.2):** parse → safety → draft (unverified)
+- **Mock LLM path (Phase 3.2, default):** parse → safety → draft (unverified)
+- **Real provider path (Phase 3.3, opt-in):** local OpenAI-compatible endpoint with `--real-provider`
 - **Legacy path:** simple local draft (no LLM)
 - Runs advisory critique (simulated)
 - Runs verification (mandatory)
@@ -43,6 +44,24 @@ python prototypes-derived/review-assistant-thin/minimal_demo.py --scenario llm_u
 python prototypes-derived/review-assistant-thin/minimal_demo.py --scenario llm_unsafe_output
 ```
 
+**Default:** mock only — no network. **Real:** `--real-provider` + `RA_LLM_BASE_URL`. Do **not** send sensitive data.
+
+---
+
+### Real provider contract (Phase 3.3 — no network by default)
+
+```powershell
+python prototypes-derived/review-assistant-thin/minimal_demo.py --scenario real_provider_forbidden_without_flag
+python prototypes-derived/review-assistant-thin/minimal_demo.py --scenario real_provider_missing_config --real-provider
+```
+
+Optional live (local endpoint required):
+
+```powershell
+$env:RA_LLM_BASE_URL = "http://127.0.0.1:1234"
+python prototypes-derived/review-assistant-thin/minimal_demo.py --scenario real_provider_synthetic --real-provider
+```
+
 ---
 
 ## Scenarios
@@ -59,6 +78,9 @@ python prototypes-derived/review-assistant-thin/minimal_demo.py --scenario llm_u
 | `llm_timeout` | `llm_timeout`, `escalation_triggered` |
 | `llm_uncertain` | `llm_uncertain`, no delivery |
 | `llm_unsafe_output` | `llm_unsafe_output`, `unsafe_action_blocked` |
+| `real_provider_forbidden_without_flag` | `provider_disabled`, no network |
+| `real_provider_missing_config` | `provider_config_missing`, no network |
+| `real_provider_synthetic` | live path with `--real-provider` only |
 
 ---
 
@@ -67,13 +89,14 @@ python prototypes-derived/review-assistant-thin/minimal_demo.py --scenario llm_u
 ```powershell
 python evaluation/scripts/check_review_assistant_thin.py      # PASS=5
 python evaluation/scripts/check_review_assistant_llm_mock.py  # PASS=5
+python evaluation/scripts/check_review_assistant_real_provider_contract.py  # PASS=2
 ```
 
 ---
 
-## What it does NOT do
+## What it does NOT do (by default)
 
-- Real LLM / OpenAI / external API
+- OpenAI cloud by default / Anthropic / RU providers
 - Auto-publish
 - Provider framework / model router
 - Telegram / FastAPI / database
@@ -107,8 +130,9 @@ See [llm_boundary.md](llm_boundary.md)
 | [governance.md](governance.md) | Scope rules |
 | [rollback.md](rollback.md) | Rollback steps |
 | [llm_boundary.md](llm_boundary.md) | Mock LLM boundary (Phase 3.2) |
+| [real_provider_boundary.md](real_provider_boundary.md) | Real provider boundary (Phase 3.3) |
 | [freeze/](freeze/README.md) | **v0.2 freeze** (v0.1 history preserved) |
 
 ## Status
 
-**FROZEN v0.2** — mock LLM boundary. Eval: thin PASS=5 + LLM mock PASS=5 + smoke PASS=12 + trace PASS=6. See [freeze/V0_2_FREEZE_RECORD.md](freeze/V0_2_FREEZE_RECORD.md).
+**v0.2 frozen mock** + **Phase 3.3 real provider contract** (opt-in). Eval: thin PASS=5 + mock PASS=5 + contract PASS=2 + smoke PASS=12 + trace PASS=6.

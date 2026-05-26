@@ -112,6 +112,44 @@ See [llm_boundary.md](llm_boundary.md) and `evaluation/review-assistant-thin/llm
 
 ---
 
+## Real provider traces (Phase 3.3)
+
+### provider disabled (no flag)
+
+```text
+- task_started
+- provider_request_prepared
+- provider_disabled
+- task_failed
+FINAL decision=FAILED delivered=False
+```
+
+### provider missing config
+
+```text
+- provider_request_prepared
+- provider_config_missing
+- task_failed
+FINAL decision=FAILED delivered=False
+```
+
+### provider success (opt-in)
+
+```text
+- provider_request_prepared
+- provider_request_started
+- provider_response_received
+- provider_parse_passed
+- draft_created
+- verification_passed
+- approval_requested
+- approval_granted
+- task_completed
+FINAL decision=DELIVERED delivered=True
+```
+
+---
+
 ## Canonical alignment
 
 Event names align with `observability/event-taxonomy/canonical-events.md` where applicable.

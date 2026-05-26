@@ -123,6 +123,9 @@ python evaluation/scripts/check_review_assistant_thin.py
 # Phase 3.2 — Review Assistant mock LLM (5 scenarios)
 python evaluation/scripts/check_review_assistant_llm_mock.py
 
+# Phase 3.3 — Review Assistant real provider contract (2 no-network scenarios)
+python evaluation/scripts/check_review_assistant_real_provider_contract.py
+
 # Summary of scenarios, gates, and coverage
 python evaluation/scripts/summarize_evaluation_status.py
 ```

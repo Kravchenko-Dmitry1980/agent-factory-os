@@ -16,11 +16,17 @@
 | Over-trusting model | skip verification after llm_parse | verification still required |
 | Prompt injection style | "ignore rules" in draft | unsafe flag in mock; real TBD |
 | Hidden command suggestion | shell cmd in LLM text | unsafe_action_blocked in llm_unsafe scenario |
+| Key leakage | API key in trace/log | env-only; never print RA_LLM_* values |
+| Provider timeout fallback | draft after live timeout | provider_timeout → escalate; no draft |
+| Malformed live response | bad JSON from endpoint | provider_parse_failed |
+| Provider output as command | execute model text | blocked; no subprocess from provider |
+| Approval bypass via provider | model says "approved" | approval_granted only from scenario gate |
+| Real call by default | network without flag | provider_disabled |
 
 ## Operator checks
 
 1. Every run prints `TRACE` section
-2. Only `happy` and `llm_valid_draft` have `delivered=True`
+2. Only `happy`, `llm_valid_draft`, and live `real_provider_synthetic` may have `delivered=True`
 3. Critic/LLM lines marked advisory / unverified
 
 ## If failure observed
