@@ -32,6 +32,9 @@
 | [phase-3-3-plan/README.md](phase-3-3-plan/README.md) | **Phase 3.3-Plan** — real LLM provider boundary (plan only) |
 | [phase-3-3-plan/FINAL_PHASE_3_3_PLAN_REPORT.md](phase-3-3-plan/FINAL_PHASE_3_3_PLAN_REPORT.md) | Provider boundary plan — no API, no framework |
 | [PHASE_3_3_REAL_PROVIDER_BOUNDARY_REVIEW.md](PHASE_3_3_REAL_PROVIDER_BOUNDARY_REVIEW.md) | **Phase 3.3** — real provider impl (PASS_WITH_NOTES) |
+| [phase-3-3-livecheck/README.md](phase-3-3-livecheck/README.md) | **Phase 3.3-LiveCheck** — LM Studio manual validation (docs only) |
+| [PHASE_3_3_LIVE_PROVIDER_CHECK_REVIEW.md](PHASE_3_3_LIVE_PROVIDER_CHECK_REVIEW.md) | **Phase 3.3-LiveCheck** — live provider check (LIVE_CHECK_PASS) |
+| [PHASE_3_3_1_FREEZE_REAL_PROVIDER_V0_3_REVIEW.md](PHASE_3_3_1_FREEZE_REAL_PROVIDER_V0_3_REVIEW.md) | **Phase 3.3.1** — freeze real provider v0.3 (PASS_WITH_NOTES) |
 | [../prototypes-derived/review-assistant-thin/README.md](../prototypes-derived/review-assistant-thin/README.md) | Review Assistant thin demo |
 | [../agent-builder-kit/README.md](../agent-builder-kit/README.md) | Agent Builder Kit v0.1 specs |
 | [PHASE_1_4_CONSOLIDATION_REPORT.md](PHASE_1_4_CONSOLIDATION_REPORT.md) | Phase 1.4 deliverables & validation |

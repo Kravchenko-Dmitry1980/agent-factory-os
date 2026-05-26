@@ -131,8 +131,8 @@ See [llm_boundary.md](llm_boundary.md)
 | [rollback.md](rollback.md) | Rollback steps |
 | [llm_boundary.md](llm_boundary.md) | Mock LLM boundary (Phase 3.2) |
 | [real_provider_boundary.md](real_provider_boundary.md) | Real provider boundary (Phase 3.3) |
-| [freeze/](freeze/README.md) | **v0.2 freeze** (v0.1 history preserved) |
+| [freeze/](freeze/README.md) | **v0.3 freeze** (v0.1 + v0.2 history preserved) |
 
 ## Status
 
-**v0.2 frozen mock** + **Phase 3.3 real provider contract** (opt-in). Eval: thin PASS=5 + mock PASS=5 + contract PASS=2 + smoke PASS=12 + trace PASS=6.
+**review-assistant-thin-v0.3 frozen** — mock default + opt-in real local provider. Eval: thin PASS=5 + mock PASS=5 + contract PASS=2 + smoke PASS=12 + trace PASS=6. Live (observed): PASS=3.

@@ -10,57 +10,89 @@
 |---------|----------|--------|
 | **v0.1** | Original thin implementation (5 scenarios, no LLM) | [IMPLEMENTATION_FREEZE_RECORD.md](IMPLEMENTATION_FREEZE_RECORD.md) |
 | **v0.2** | Thin + mock LLM boundary (10 scenarios) | [V0_2_FREEZE_RECORD.md](V0_2_FREEZE_RECORD.md) |
+| **v0.3** | Thin + mock LLM + real local provider boundary (13 scenarios) | [V0_3_FREEZE_RECORD.md](V0_3_FREEZE_RECORD.md) |
 
 ---
 
 ## Current frozen version
 
-**review-assistant-thin-v0.2**
+**review-assistant-thin-v0.3**
 
 Path: `prototypes-derived/review-assistant-thin/`
 
 ---
 
-## What v0.2 adds
+## What v0.3 adds
 
-- Mock LLM boundary (local payloads only)
-- 5 LLM mock scenarios (`llm_*`)
-- LLM parse / timeout / uncertainty / unsafe output handling
-- LLM event traces in stdout
-- LLM mock evaluation script (`check_review_assistant_llm_mock.py`)
-- [V0_2_LLM_BOUNDARY_BASELINE.md](V0_2_LLM_BOUNDARY_BASELINE.md)
+- Local OpenAI-compatible provider boundary (opt-in)
+- Explicit `--real-provider` mode
+- 3 real provider contract scenarios (`real_provider_*`)
+- No-network contract check (`PASS=2` default)
+- LM Studio LiveCheck result (`PASS=3` observed)
+- Synthetic-only live provider run
+- Provider error / disabled / config-missing checks
+- Secret / data / cloud safety policy documented
+- [V0_3_REAL_PROVIDER_BOUNDARY_BASELINE.md](V0_3_REAL_PROVIDER_BOUNDARY_BASELINE.md)
+- [V0_3_LIVE_PROVIDER_RECORD.md](V0_3_LIVE_PROVIDER_RECORD.md)
 
 ---
 
-## What v0.2 does NOT add
+## What v0.3 does NOT add
 
-- Real LLM API (OpenAI, Anthropic, etc.)
-- Provider framework / model router
+- OpenAI cloud
+- Anthropic
+- GigaChat / YandexGPT
+- Bitrix / NeuralDeep
+- Provider framework / router / registry
 - Runtime / factory / generator
 - Second agent / second template
-- RAG / MCP / CV / digital twin
+- RAG / MCP
+- Desktop UI / Operator Console
+- Production deployment
 - Persistent memory / auto-publish
-- External dependencies or network calls
+
+---
+
+## What v0.2 adds (historical — preserved)
+
+- Mock LLM boundary (local payloads only)
+- 5 LLM mock scenarios (`llm_*`)
+- [V0_2_LLM_BOUNDARY_BASELINE.md](V0_2_LLM_BOUNDARY_BASELINE.md)
 
 ---
 
 ## Why freeze
 
-Phase 3.1 доказал: frozen template можно реализовать локально. Phase 3.2 добавил mock LLM boundary без real API. Freeze v0.2 фиксирует **рабочую baseline** до любых расширений (real provider, CLI, второй agent).
+Phase 3.1 доказал: frozen template можно реализовать локально. Phase 3.2 добавил mock LLM. Phase 3.3 добавил opt-in real local provider. LiveCheck подтвердил LM Studio. Freeze v0.3 фиксирует **рабочую baseline** до любых расширений (cloud provider, prompt injection harness, второй agent).
 
 ---
 
-## Key documents (v0.2 — current)
+## Key documents (v0.3 — current)
 
 | Doc | Content |
 |-----|---------|
-| [V0_2_FREEZE_RECORD.md](V0_2_FREEZE_RECORD.md) | Status, date, what changed |
-| [V0_2_IMPLEMENTATION_MANIFEST.md](V0_2_IMPLEMENTATION_MANIFEST.md) | File inventory |
-| [V0_2_LLM_BOUNDARY_BASELINE.md](V0_2_LLM_BOUNDARY_BASELINE.md) | Mock LLM boundary spec |
-| [V0_2_SCENARIO_BASELINE.md](V0_2_SCENARIO_BASELINE.md) | 10 scenario baselines |
-| [V0_2_VALIDATION_RECORD.md](V0_2_VALIDATION_RECORD.md) | Check script results |
-| [V0_2_CHANGE_LOCK.md](V0_2_CHANGE_LOCK.md) | Change rules (active) |
-| [V0_2_ROLLBACK_RECORD.md](V0_2_ROLLBACK_RECORD.md) | Rollback steps |
+| [V0_3_FREEZE_RECORD.md](V0_3_FREEZE_RECORD.md) | Status, date, what changed |
+| [V0_3_IMPLEMENTATION_MANIFEST.md](V0_3_IMPLEMENTATION_MANIFEST.md) | File inventory |
+| [V0_3_REAL_PROVIDER_BOUNDARY_BASELINE.md](V0_3_REAL_PROVIDER_BOUNDARY_BASELINE.md) | Real provider boundary spec |
+| [V0_3_SCENARIO_BASELINE.md](V0_3_SCENARIO_BASELINE.md) | 13 scenario baselines |
+| [V0_3_VALIDATION_RECORD.md](V0_3_VALIDATION_RECORD.md) | Check script results |
+| [V0_3_LIVE_PROVIDER_RECORD.md](V0_3_LIVE_PROVIDER_RECORD.md) | LM Studio live record |
+| [V0_3_CHANGE_LOCK.md](V0_3_CHANGE_LOCK.md) | Change rules (**active**) |
+| [V0_3_ROLLBACK_RECORD.md](V0_3_ROLLBACK_RECORD.md) | Rollback to v0.2 |
+
+---
+
+## Historical documents (v0.2 — preserved)
+
+| Doc | Content |
+|-----|---------|
+| [V0_2_FREEZE_RECORD.md](V0_2_FREEZE_RECORD.md) | v0.2 freeze record |
+| [V0_2_IMPLEMENTATION_MANIFEST.md](V0_2_IMPLEMENTATION_MANIFEST.md) | v0.2 manifest |
+| [V0_2_LLM_BOUNDARY_BASELINE.md](V0_2_LLM_BOUNDARY_BASELINE.md) | Mock LLM baseline |
+| [V0_2_SCENARIO_BASELINE.md](V0_2_SCENARIO_BASELINE.md) | 10 scenarios |
+| [V0_2_VALIDATION_RECORD.md](V0_2_VALIDATION_RECORD.md) | v0.2 validation |
+| [V0_2_CHANGE_LOCK.md](V0_2_CHANGE_LOCK.md) | v0.2 change lock (superseded) |
+| [V0_2_ROLLBACK_RECORD.md](V0_2_ROLLBACK_RECORD.md) | v0.2 rollback |
 
 ---
 
@@ -78,7 +110,7 @@ Phase 3.1 доказал: frozen template можно реализовать ло
 
 ## Change policy
 
-Любое изменение **поведения** frozen impl → [V0_2_CHANGE_LOCK.md](V0_2_CHANGE_LOCK.md)
+Любое изменение **поведения** frozen impl → [V0_3_CHANGE_LOCK.md](V0_3_CHANGE_LOCK.md)
 
 ---
 
@@ -88,6 +120,9 @@ Phase 3.1 доказал: frozen template можно реализовать ло
 - Phase 3.1.1 review: [governance/PHASE_3_1_1_FREEZE_HARDEN_REVIEW.md](../../../governance/PHASE_3_1_1_FREEZE_HARDEN_REVIEW.md)
 - Phase 3.2 review: [governance/PHASE_3_2_MOCK_LLM_ADAPTER_REVIEW.md](../../../governance/PHASE_3_2_MOCK_LLM_ADAPTER_REVIEW.md)
 - Phase 3.2.1 review: [governance/PHASE_3_2_1_FREEZE_MOCK_LLM_V0_2_REVIEW.md](../../../governance/PHASE_3_2_1_FREEZE_MOCK_LLM_V0_2_REVIEW.md)
+- Phase 3.3 review: [governance/PHASE_3_3_REAL_PROVIDER_BOUNDARY_REVIEW.md](../../../governance/PHASE_3_3_REAL_PROVIDER_BOUNDARY_REVIEW.md)
+- Phase 3.3-LiveCheck: [governance/PHASE_3_3_LIVE_PROVIDER_CHECK_REVIEW.md](../../../governance/PHASE_3_3_LIVE_PROVIDER_CHECK_REVIEW.md)
+- Phase 3.3.1 review: [governance/PHASE_3_3_1_FREEZE_REAL_PROVIDER_V0_3_REVIEW.md](../../../governance/PHASE_3_3_1_FREEZE_REAL_PROVIDER_V0_3_REVIEW.md)
 - Frozen spec (unchanged): `agent-builder-kit/templates/review-assistant-agent/`
 
-**Status:** FROZEN_WITH_NOTES — **v0.2** (2026-05-26)
+**Status:** FROZEN_WITH_NOTES — **v0.3** (2026-05-26)

@@ -79,14 +79,19 @@ Expected: `Summary: PASS=2 FAIL=0` (no network)
 | [real-provider-scenario-checklist.md](real-provider-scenario-checklist.md) | Real provider checklist |
 | [real-provider-expected-events.md](real-provider-expected-events.md) | Event substrings |
 | [real-provider-hardening-notes.md](real-provider-hardening-notes.md) | Scope limits |
+| [live-provider-checklist.md](live-provider-checklist.md) | **Phase 3.3-LiveCheck** — LM Studio live validation checklist |
 
 ---
 
 ## Impl freeze
 
-**Current:** [review-assistant-thin-v0.2](../../prototypes-derived/review-assistant-thin/freeze/V0_2_SCENARIO_BASELINE.md)
+**Current:** [review-assistant-thin-v0.3](../../prototypes-derived/review-assistant-thin/freeze/V0_3_SCENARIO_BASELINE.md)
 
-Baselines: [V0_2_SCENARIO_BASELINE.md](../../prototypes-derived/review-assistant-thin/freeze/V0_2_SCENARIO_BASELINE.md) (v0.1: [SCENARIO_BASELINE.md](../../prototypes-derived/review-assistant-thin/freeze/SCENARIO_BASELINE.md))
+Baselines:
+
+- v0.3: [V0_3_SCENARIO_BASELINE.md](../../prototypes-derived/review-assistant-thin/freeze/V0_3_SCENARIO_BASELINE.md)
+- v0.2: [V0_2_SCENARIO_BASELINE.md](../../prototypes-derived/review-assistant-thin/freeze/V0_2_SCENARIO_BASELINE.md)
+- v0.1: [SCENARIO_BASELINE.md](../../prototypes-derived/review-assistant-thin/freeze/SCENARIO_BASELINE.md)
 
 ---
 
