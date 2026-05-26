@@ -68,4 +68,6 @@ Markdown-only. Без кода. Без изменения поведения а�
 
 [governance/PHASE_3_5_1_HANDS_ON_DEMO_REPORT_REVIEW.md](../../governance/PHASE_3_5_1_HANDS_ON_DEMO_REPORT_REVIEW.md)
 
+**Next (planned, not built):** [governance/phase-3-5-2-plan/](../../governance/phase-3-5-2-plan/README.md) — Demo Runner с меню и русским резюме
+
 **Date:** 2026-05-26

@@ -24,6 +24,7 @@
 | [SAFE_CHANGE_SHORT_GUIDE.md](SAFE_CHANGE_SHORT_GUIDE.md) | Коротко про безопасные изменения |
 | [WHAT_NOT_TO_DO.md](WHAT_NOT_TO_DO.md) | Запреты для новичка |
 | [../../demos/review-assistant-hands-on/DEMO_SUMMARY_FOR_DMITRY_RU.md](../../demos/review-assistant-hands-on/DEMO_SUMMARY_FOR_DMITRY_RU.md) | Hands-on: что реально запускалось (Phase 3.5.1) |
+| [../../governance/phase-3-5-2-plan/README.md](../../governance/phase-3-5-2-plan/README.md) | План Demo Runner — меню и русское резюме (Phase 3.5.2-Plan) |
 
 ---
 

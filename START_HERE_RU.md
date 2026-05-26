@@ -56,6 +56,8 @@ python evaluation/scripts/check_expected_text_traces.py
 
 **Review Assistant thin (Phase 3.1+):** полный hands-on walkthrough — [demos/review-assistant-hands-on/README.md](demos/review-assistant-hands-on/README.md)
 
+**Planned (not built):** Demo Runner — [governance/phase-3-5-2-plan/README.md](governance/phase-3-5-2-plan/README.md)
+
 Опционально — сводка статуса:
 
 ```powershell
