@@ -43,9 +43,10 @@ Markdown-only. Без кода. Без изменения поведения а�
 - не product UI
 - не production
 - не полноценная agent platform
-- не Task Triage implementation
 - не Operator Console
-- не новый код или runner (только отчёт)
+- не Task Triage implementation
+
+**Demo Runner v0.1 (FROZEN_WITH_NOTES):** UX wrapper — [../review-assistant-runner/README.md](../review-assistant-runner/README.md) · [freeze](../review-assistant-runner/freeze/README.md)
 
 ---
 
@@ -68,6 +69,6 @@ Markdown-only. Без кода. Без изменения поведения а�
 
 [governance/PHASE_3_5_1_HANDS_ON_DEMO_REPORT_REVIEW.md](../../governance/PHASE_3_5_1_HANDS_ON_DEMO_REPORT_REVIEW.md)
 
-**Next (planned, not built):** [governance/phase-3-5-2-plan/](../../governance/phase-3-5-2-plan/README.md) — Demo Runner с меню и русским резюме
+**Next:** Demo Runner v0.1 frozen — [../review-assistant-runner/freeze/README.md](../review-assistant-runner/freeze/README.md)
 
 **Date:** 2026-05-26

@@ -56,7 +56,16 @@ python evaluation/scripts/check_expected_text_traces.py
 
 **Review Assistant thin (Phase 3.1+):** полный hands-on walkthrough — [demos/review-assistant-hands-on/README.md](demos/review-assistant-hands-on/README.md)
 
-**Planned (not built):** Demo Runner — [governance/phase-3-5-2-plan/README.md](governance/phase-3-5-2-plan/README.md)
+**Demo Runner v0.1 (FROZEN_WITH_NOTES):** меню и русское резюме — [demos/review-assistant-runner/README.md](demos/review-assistant-runner/README.md)
+
+Freeze: [demos/review-assistant-runner/freeze/README.md](demos/review-assistant-runner/freeze/README.md)
+
+```powershell
+python demos/review-assistant-runner/demo_runner.py
+python demos/review-assistant-runner/demo_runner.py --scenario happy
+```
+
+**Planned (not built):** Phase 3.5.3+ — см. [governance/phase-3-5-2-plan/README.md](governance/phase-3-5-2-plan/README.md)
 
 Опционально — сводка статуса:
 
@@ -111,6 +120,8 @@ python evaluation/scripts/summarize_evaluation_status.py
 |----------|-------|
 | [QUICKSTART_RU.md](QUICKSTART_RU.md) | Одна страница — быстрый запуск |
 | [demos/review-assistant-hands-on/README.md](demos/review-assistant-hands-on/README.md) | Hands-on demo Review Assistant (Phase 3.5.1) |
+| [demos/review-assistant-runner/README.md](demos/review-assistant-runner/README.md) | Demo Runner v0.1 — FROZEN_WITH_NOTES (Phase 3.5.2) |
+| [demos/review-assistant-runner/freeze/README.md](demos/review-assistant-runner/freeze/README.md) | Freeze records demo-runner-v0.1 |
 | [curriculum/ru/README.md](curriculum/ru/README.md) | Учебная программа |
 | [operator-playbooks/ru/README.md](operator-playbooks/ru/README.md) | Мост для оператора |
 | [governance/PHASE_3_START_CONDITIONS.md](governance/PHASE_3_START_CONDITIONS.md) | Условия старта Phase 3 |
