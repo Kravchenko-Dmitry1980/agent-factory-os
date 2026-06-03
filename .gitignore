@@ -1,12 +1,73 @@
+# Python virtual environments
 .venv/
+venv/
+env/
+ENV/
+
+# Python cache
 __pycache__/
 *.pyc
-.env
-*.env
-Thumbs.db
-.DS_Store
-*.log
-integrations-real/.data/
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
 
-# Phase 2.10 external triage clones (local research only; reports are in repo-reviews/)
+# Environment / secrets
+.env
+.env.*
+*.key
+*.pem
+*.secret
+*.token
+secrets.*
+credentials.*
+config.local.*
+
+# Logs / temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Runtime data
+integrations-real/.data/
+demos/review-assistant-runner/transcripts/
+demos/review-assistant-freeform/transcripts/
+
+# External cloned repos / local research sources
 external-repos-triage/source/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build artifacts
+dist/
+build/
+site/
+
+# Local accidental root artifacts (editor/session junk — do not commit)
+/1
+/2
+/3
+/4
+/Code
+/[
+/]
+/achieving
+/competitive
+/for
+/from
+/in
+/performance
+/programming
+/ranging
+/repository-
+/strong
+/tasks
+/to
